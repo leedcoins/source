@@ -1,0 +1,3 @@
+usr/local/bin/leedcoind usr/bin
+usr/local/bin/leedcoin-cli usr/bin
+debian/examples/leedcoin.conf etc/leedcoin

@@ -1,0 +1,8 @@
+/usr/bin/leedcoin-cli		--	gen_context(system_u:object_r:leedcoin_exec_t,s0)
+/usr/sbin/leedcoind		--	gen_context(system_u:object_r:leedcoin_exec_t,s0)
+/usr/lib(64)?/leedcoin/leedcoind		--	gen_context(system_u:object_r:leedcoin_exec_t,s0)
+
+/etc/leedcoin(/.*)?		gen_context(system_u:object_r:leedcoin_conf_t,s0)
+/var/lib/leedcoin(/.*)?		gen_context(system_u:object_r:leedcoin_var_lib_t,s0)
+
+(/var)?/run/leedcoind(/.*)?   gen_context(system_u:object_r:leedcoin_var_run_t,s0)

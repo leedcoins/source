@@ -1,0 +1,6 @@
+usr/local/bin/leedcoin-qt usr/bin
+share/pixmaps/leedcoin32.xpm usr/share/pixmaps
+share/pixmaps/leedcoin16.xpm usr/share/pixmaps
+share/pixmaps/leedcoin128.png usr/share/pixmaps
+debian/leedcoin-qt.desktop usr/share/applications
+debian/leedcoin-qt.protocol usr/share/kde4/services/

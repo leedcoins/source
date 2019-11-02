@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/leedcoin_bg.qm</file>
+        <file alias="ca">locale/leedcoin_ca.qm</file>
+        <file alias="cs">locale/leedcoin_cs.qm</file>
+        <file alias="da">locale/leedcoin_da.qm</file>
+        <file alias="de">locale/leedcoin_de.qm</file>
+        <file alias="en">locale/leedcoin_en.qm</file>
+        <file alias="en_GB">locale/leedcoin_en_GB.qm</file>
+        <file alias="en_US">locale/leedcoin_en_US.qm</file>
+        <file alias="eo">locale/leedcoin_eo.qm</file>
+        <file alias="es">locale/leedcoin_es.qm</file>
+        <file alias="es_ES">locale/leedcoin_es_ES.qm</file>
+        <file alias="fi">locale/leedcoin_fi.qm</file>
+        <file alias="fr_FR">locale/leedcoin_fr_FR.qm</file>
+        <file alias="hi_IN">locale/leedcoin_hi_IN.qm</file>
+        <file alias="hr">locale/leedcoin_hr.qm</file>
+        <file alias="hr_HR">locale/leedcoin_hr_HR.qm</file>
+        <file alias="it">locale/leedcoin_it.qm</file>
+        <file alias="ja">locale/leedcoin_ja.qm</file>
+        <file alias="ko_KR">locale/leedcoin_ko_KR.qm</file>
+        <file alias="lt_LT">locale/leedcoin_lt_LT.qm</file>
+        <file alias="nl">locale/leedcoin_nl.qm</file>
+        <file alias="pl">locale/leedcoin_pl.qm</file>
+        <file alias="pt">locale/leedcoin_pt.qm</file>
+        <file alias="pt_BR">locale/leedcoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/leedcoin_ro_RO.qm</file>
+        <file alias="ru">locale/leedcoin_ru.qm</file>
+        <file alias="sk">locale/leedcoin_sk.qm</file>
+        <file alias="sv">locale/leedcoin_sv.qm</file>
+        <file alias="tr">locale/leedcoin_tr.qm</file>
+        <file alias="uk">locale/leedcoin_uk.qm</file>
+        <file alias="vi">locale/leedcoin_vi.qm</file>
+        <file alias="zh_CN">locale/leedcoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/leedcoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

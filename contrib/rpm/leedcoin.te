@@ -1,0 +1,81 @@
+policy_module(leedcoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type leedcoin_t;
+type leedcoin_exec_t;
+init_daemon_domain(leedcoin_t, leedcoin_exec_t)
+
+permissive leedcoin_t;
+
+type leedcoin_initrc_exec_t;
+init_script_file(leedcoin_initrc_exec_t)
+
+type leedcoin_conf_t;
+files_type(leedcoin_conf_t)
+
+type leedcoin_var_lib_t;
+files_type(leedcoin_var_lib_t)
+
+type leedcoin_var_run_t;
+files_type(leedcoin_var_run_t)
+
+type leedcoin_port_t;
+corenet_port(leedcoin_port_t)
+
+########################################
+#
+# leedcoin local policy
+#
+allow leedcoin_t self:process { fork };
+
+allow leedcoin_t self:fifo_file rw_fifo_file_perms;
+allow leedcoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(leedcoin_t, leedcoin_conf_t, leedcoin_conf_t)
+manage_files_pattern(leedcoin_t, leedcoin_conf_t, leedcoin_conf_t)
+
+manage_dirs_pattern(leedcoin_t, leedcoin_var_lib_t, leedcoin_var_lib_t)
+manage_files_pattern(leedcoin_t, leedcoin_var_lib_t, leedcoin_var_lib_t)
+files_var_lib_filetrans(leedcoin_t, leedcoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(leedcoin_t, leedcoin_var_run_t, leedcoin_var_run_t)
+manage_files_pattern(leedcoin_t, leedcoin_var_run_t, leedcoin_var_run_t)
+
+sysnet_dns_name_resolve(leedcoin_t)
+corenet_all_recvfrom_unlabeled(leedcoin_t)
+
+allow leedcoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(leedcoin_t)
+corenet_tcp_sendrecv_generic_node(leedcoin_t)
+corenet_tcp_sendrecv_all_ports(leedcoin_t)
+corenet_tcp_bind_generic_node(leedcoin_t)
+
+gen_require(`
+    type leedcoin_port_t;
+')
+allow leedcoin_t leedcoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type leedcoin_port_t;
+')
+allow leedcoin_t leedcoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(leedcoin_t)
+
+files_read_etc_files(leedcoin_t)
+
+miscfiles_read_localization(leedcoin_t)
+
+sysnet_dns_name_resolve(leedcoin_t)
+
+allow leedcoin_t leedcoin_exec_t:file execute_no_trans;
+allow leedcoin_t self:process setsched;
+corecmd_exec_ls(leedcoin_t)
+corenet_tcp_connect_http_port(leedcoin_t)
+dev_read_urand(leedcoin_t)
+fs_getattr_xattr_fs(leedcoin_t)
+kernel_read_system_state(leedcoin_t)
